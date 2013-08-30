@@ -73,4 +73,24 @@ public class ScoreKeeper {
 	}
 	
 	// Early set
+	public void earlySet(){
+		if(bidder){
+			scoreOne -= bid;
+			scoreTwo += trixOne;
+		}
+		else{
+			scoreTwo -= bid;
+			scoreOne += meldOne;
+		}
+	}
+	
+	// Dump set
+	public void dumpSet(){
+		if(bidder){
+			scoreOne -= bid;
+		}
+		else{
+			scoreTwo -= bid;
+		}
+	}
 }
